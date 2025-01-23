@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text("Bienvenido, seleccione tu peso y altura", style: TextStyle(
               fontSize: 16.0, 
@@ -91,7 +92,66 @@ class HomePage extends StatelessWidget {
                icon: Icon(Icons.play_arrow_outlined),
                style: ElevatedButton.styleFrom(backgroundColor: Color(0xFF073b4c) ),
                ),
-             )
+             ),
+             SizedBox(
+              height: 10.0,
+             ),
+             Divider(
+              height: 10.0,
+              color: Color(0xFF073b4c) ,
+             ),
+             Text("Resultado", style: TextStyle( fontSize: 15.0,fontWeight: FontWeight.bold,
+              color:  Color(0xFF073b4c),
+              ),
+              ),
+             Center(
+              child: Image.asset("assets/image/image4.png",
+              height: 200.0,
+              fit: BoxFit.contain,),
+              
+            ),
+            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              
+              children: [
+                Text("175",style: TextStyle(
+                  fontSize: 30.0, fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 206, 40, 2),
+                )),
+               
+              ],
+            ),
+             SizedBox(
+                  width: 2.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              
+              children: [
+                Text("Sobrepeso",style: TextStyle(
+                  fontSize: 12.0, fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 12, 47, 205),
+                )),
+               
+              ],
+            ),
+            SizedBox(
+                  width: 4.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              
+              children: [
+                Text("Toma agua simple,evite el consumo de refresco, jugos o cualquier bebida que contenga azucar.Realize actividad fisica",style: TextStyle(
+                  fontSize: 12.0, fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                )),
+               
+              ],
+            ),
+            
+                
           ],
         ),
       ),
